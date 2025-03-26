@@ -4,7 +4,8 @@
     <string name="app_name">Art Space App</string>
 
     // For the text field label
-    <string name="slide_reference_number">Enter Slide Reference Number</string>
+    <string name="text_field_label">Image Number</string>
+    <string name="text_field_instruction">Enter the image number below to view its corresponding image.</string>
 
     // For the image name in chronological order
     <string name="image_1">Emerald Valley Serenade</string>
