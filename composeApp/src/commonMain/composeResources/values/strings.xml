@@ -1,0 +1,37 @@
+<resources>
+
+    // For the app name
+    <string name="app_name">Art Space App</string>
+
+    // For the text field label
+    <string name="slide_reference_number">Enter Slide Reference Number</string>
+
+    // For the image name in chronological order
+    <string name="image_1">Emerald Valley Serenade</string>
+    <string name="image_2">Floating Floral Beauty</string>
+    <string name="image_3">Golden Lake Reflections</string>
+    <string name="image_4">Painted Meadow Dreams</string>
+    <string name="image_5">Sunlit Sanctuary</string>
+    <string name="image_6">Whispers of the Savannah Grove</string>
+
+    // For the author name in chronological order
+    <string name="author_1">Ethan Caldwell</string>
+    <string name="author_2">Eleanor Rosewood</string>
+    <string name="author_3">Olivia Hawthorne</string>
+    <string name="author_4">Clara Hemlock</string>
+    <string name="author_5">Sophia Greenwood</string>
+    <string name="author_6">James Abernathy</string>
+
+    // For the published year in chronological order
+    <string name="year_1">2015</string>
+    <string name="year_2">2023</string>
+    <string name="year_3">2019</string>
+    <string name="year_4">2021</string>
+    <string name="year_5">2012</string>
+    <string name="year_6">2018</string>
+
+    // For the app buttons
+    <string name="button_1">Previous</string>
+    <string name="button_2">Next</string>
+
+</resources>
