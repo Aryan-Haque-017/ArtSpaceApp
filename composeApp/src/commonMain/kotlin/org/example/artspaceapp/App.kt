@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
@@ -24,6 +25,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.resources.painterResource
@@ -47,6 +50,7 @@ import artspaceapp.composeapp.generated.resources.image_3
 import artspaceapp.composeapp.generated.resources.image_4
 import artspaceapp.composeapp.generated.resources.image_5
 import artspaceapp.composeapp.generated.resources.image_6
+import artspaceapp.composeapp.generated.resources.invalid_number_error
 import artspaceapp.composeapp.generated.resources.painted_meadow_dreams
 import artspaceapp.composeapp.generated.resources.sunlit_sanctuary
 import artspaceapp.composeapp.generated.resources.whispers_of_the_savannah_grove
@@ -62,7 +66,6 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 
-// wasmJsBrowserRun -t --quiet
 
 @Composable
 @Preview
@@ -141,6 +144,7 @@ fun GeneralScreenLayout(modifier: Modifier = Modifier) {
 
     Column(
         verticalArrangement = Arrangement.SpaceEvenly,
+        horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
     ) {
         // Instruction text for the TextField
@@ -163,13 +167,17 @@ fun GeneralScreenLayout(modifier: Modifier = Modifier) {
                     slideNumber = parsed
                 }
             },
+            keyboardOptions = KeyboardOptions.Default.copy(
+                keyboardType = KeyboardType.Number,
+                imeAction = ImeAction.Done
+            ),
             label = { Text(text = stringResource(resource = Res.string.text_field_label)) },
             isError = inputError
         )
         // Error message for invalid input
         AnimatedVisibility(visible = inputError) {
             Text(
-                text = "Please enter a valid number between $MIN_SLIDE and $MAX_SLIDE",
+                text = stringResource(resource = Res.string.invalid_number_error, MIN_SLIDE, MAX_SLIDE),
                 color = Color.Red,
                 modifier = Modifier.align(Alignment.CenterHorizontally)
             )
@@ -178,7 +186,9 @@ fun GeneralScreenLayout(modifier: Modifier = Modifier) {
         Image(
             painter = painterResource(resource = returnImage(slideNumber)),
             contentDescription = null,
-            modifier = Modifier.border(
+            modifier = Modifier
+                .size(280.dp)
+                .border(
                 border = BorderStroke(20.dp, color = Color(0xFFE0E0E0))
             )
         )
