@@ -188,7 +188,7 @@ fun GeneralScreenLayout(modifier: Modifier = Modifier) {
         // Display image based on the current slide number
         Image(
             painter = painterResource(resource = returnImage(slideNumber)),
-            contentDescription = null,
+            contentDescription = stringResource(resource = returnTitle(slideNumber)),
             modifier = Modifier
                 .size(280.dp)
                 .border(
