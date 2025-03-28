@@ -57,13 +57,13 @@ import artspaceapp.composeapp.generated.resources.painted_meadow_dreams
 import artspaceapp.composeapp.generated.resources.sunlit_sanctuary
 import artspaceapp.composeapp.generated.resources.whispers_of_the_savannah_grove
 import artspaceapp.composeapp.generated.resources.year_1
-import artspaceapp.composeapp.generated.resources.text_field_instruction
-import artspaceapp.composeapp.generated.resources.text_field_label
 import artspaceapp.composeapp.generated.resources.year_2
 import artspaceapp.composeapp.generated.resources.year_3
 import artspaceapp.composeapp.generated.resources.year_4
 import artspaceapp.composeapp.generated.resources.year_5
 import artspaceapp.composeapp.generated.resources.year_6
+import artspaceapp.composeapp.generated.resources.text_field_instruction
+import artspaceapp.composeapp.generated.resources.text_field_label
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
