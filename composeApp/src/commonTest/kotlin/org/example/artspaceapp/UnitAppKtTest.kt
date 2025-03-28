@@ -25,7 +25,7 @@ import artspaceapp.composeapp.generated.resources.year_3
 import artspaceapp.composeapp.generated.resources.year_4
 import artspaceapp.composeapp.generated.resources.year_5
 import artspaceapp.composeapp.generated.resources.year_6
-import org.example.artspaceapp.returnAuthor
+import org.example.artspaceapp.returnArtist
 import org.example.artspaceapp.returnImage
 import org.example.artspaceapp.returnTitle
 import org.example.artspaceapp.returnYear
@@ -59,13 +59,13 @@ class UnitAppKtTest {
     // For testing the painter name
     @Test
     fun testReturnAuthor() {
-        assertEquals(expected = returnAuthor(imageNumber = 1), actual = Res.string.author_1)
-        assertEquals(expected = returnAuthor(imageNumber = 2), actual = Res.string.author_2)
-        assertEquals(expected = returnAuthor(imageNumber = 3), actual = Res.string.author_3)
-        assertEquals(expected = returnAuthor(imageNumber = 4), actual = Res.string.author_4)
-        assertEquals(expected = returnAuthor(imageNumber = 5), actual = Res.string.author_5)
-        assertEquals(expected = returnAuthor(imageNumber = 6), actual = Res.string.author_6)
-        assertEquals(expected = returnAuthor(imageNumber = 7), actual = Res.string.author_1)
+        assertEquals(expected = returnArtist(imageNumber = 1), actual = Res.string.author_1)
+        assertEquals(expected = returnArtist(imageNumber = 2), actual = Res.string.author_2)
+        assertEquals(expected = returnArtist(imageNumber = 3), actual = Res.string.author_3)
+        assertEquals(expected = returnArtist(imageNumber = 4), actual = Res.string.author_4)
+        assertEquals(expected = returnArtist(imageNumber = 5), actual = Res.string.author_5)
+        assertEquals(expected = returnArtist(imageNumber = 6), actual = Res.string.author_6)
+        assertEquals(expected = returnArtist(imageNumber = 7), actual = Res.string.author_1)
     }
     // For testing the year
     @Test

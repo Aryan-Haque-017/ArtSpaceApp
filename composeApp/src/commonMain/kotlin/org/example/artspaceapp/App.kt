@@ -108,7 +108,7 @@ fun returnTitle(imageNumber: Int): StringResource {
 }
 
 // Return the author corresponding to the given slide number
-fun returnAuthor(imageNumber: Int): StringResource {
+fun returnArtist(imageNumber: Int): StringResource {
     return when (imageNumber) {
         1 -> Res.string.author_1
         2 -> Res.string.author_2
@@ -201,6 +201,7 @@ fun GeneralScreenLayout(modifier: Modifier = Modifier) {
                 .fillMaxWidth()
                 .background(color = Color(0xFFE0E0E0))
         ) {
+            // For the acutal title
             Text(
                 text = stringResource(resource = returnTitle(slideNumber)),
                 fontWeight = FontWeight.Light,
@@ -210,12 +211,14 @@ fun GeneralScreenLayout(modifier: Modifier = Modifier) {
             Row(
                 modifier = Modifier.fillMaxWidth()
             ) {
+                // For the artist
                 Text(
-                    text = stringResource(resource = returnAuthor(slideNumber)),
+                    text = stringResource(resource = returnArtist(slideNumber)),
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.padding(start = 12.dp, bottom = 12.dp)
                 )
                 Spacer(modifier = Modifier.width(4.dp))
+                // For the year
                 Text(
                     text = "(" + stringResource(resource = returnYear(slideNumber)) + ")"
                 )
