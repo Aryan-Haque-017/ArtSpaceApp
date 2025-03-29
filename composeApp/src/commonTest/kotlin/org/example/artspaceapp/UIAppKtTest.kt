@@ -12,6 +12,9 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.runComposeUiTest
 import androidx.compose.ui.unit.dp
+import artspaceapp.composeapp.generated.resources.Res
+import artspaceapp.composeapp.generated.resources.text_field_instruction
+import org.jetbrains.compose.resources.stringResource
 import kotlin.test.Test
 
 // I think it is bad or inappropriate to use hardcodes string, yeah I'll consider them later
@@ -32,7 +35,8 @@ class UIAppKtTest {
             )
         }
         // To justify that the message for the use of the textField exists
-        onNodeWithText("Enter the image number below to view its corresponding image.").assertExists()
+        //"Enter the image number below to view its corresponding image."
+        onNodeWithText(Res.string.text_field_instruction.toString()).assertExists()
         // To justify that the textField exists
         onNodeWithText("Image Number").assertExists()
 
@@ -155,6 +159,5 @@ class UIAppKtTest {
         onNodeWithText("Emerald Valley Serenade").assertExists()
         onNodeWithText("Ethan Caldwell").assertExists()
         onNodeWithText("(2015)").assertExists()
-
     }
 }
