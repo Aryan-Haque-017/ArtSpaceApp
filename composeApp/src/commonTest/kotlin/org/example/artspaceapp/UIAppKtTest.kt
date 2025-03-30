@@ -10,13 +10,9 @@ import androidx.compose.ui.test.ExperimentalTestApi
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import androidx.compose.ui.test.performTextClearance
-import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.test.performTextReplacement
 import androidx.compose.ui.test.runComposeUiTest
 import androidx.compose.ui.unit.dp
-import artspaceapp.composeapp.generated.resources.Res
-import artspaceapp.composeapp.generated.resources.text_field_instruction
 import kotlin.test.Test
 
 // I think it is bad or inappropriate to use hardcodes string, yeah I'll consider them later
